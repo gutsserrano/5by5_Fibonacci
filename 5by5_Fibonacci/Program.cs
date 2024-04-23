@@ -12,10 +12,20 @@ do
     ant = 0;
     pos = 1;
 
-    Console.WriteLine("Digite quantos valores da sequência que irão aparecer:");
-    num = int.Parse(Console.ReadLine());
+    do
+    {
+        Console.WriteLine("Digite quantos valores da sequência que irão aparecer:");
+        num = int.Parse(Console.ReadLine());
 
-    for (int i = 0; i < num; i++)
+        if (num <= 0)
+        {
+            Console.WriteLine("\nValor deve ser maior que zero!\n");
+        }
+    } while (num <= 0);
+
+    Console.Write("\n0 ");
+
+    for (int i = 1; i < num; i++)
     {
         Console.Write(fib + " ");
         fib = ant + pos;
