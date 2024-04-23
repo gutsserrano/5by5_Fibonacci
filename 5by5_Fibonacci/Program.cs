@@ -9,7 +9,7 @@ int option;
 do
 {
     fib = 1;
-    ant = 0;
+    ant = -1;
     pos = 1;
 
     do
@@ -23,12 +23,12 @@ do
         }
     } while (num <= 0);
 
-    Console.Write("\n0 ");
+    Console.Write("\n");
 
-    for (int i = 1; i < num; i++)
+    for (int i = 0; i < num; i++)
     {
-        Console.Write(fib + " ");
         fib = ant + pos;
+        Console.Write(fib + " ");
         ant = pos;
         pos = fib;
     }
